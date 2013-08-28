@@ -5,6 +5,8 @@ set background=dark
 
 " show row numbers
 set nu
+" show line, column number, and relative position
+set ruler
 
 " set standard setting for PEAR coding standards
 set tabstop=4
@@ -13,6 +15,7 @@ set smarttab
 set expandtab
 set smartindent
 set autoindent
+set showmatch
 set ai " enable autoindents for new rows
 set cin " c style indents
 syntax on
