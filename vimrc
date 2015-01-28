@@ -18,7 +18,7 @@ set autoindent
 set showmatch
 set ai " enable autoindents for new rows
 set cin " c style indents
-syntax on
+syntax enable
 
 " Enable line break wrapping
 set wrap
@@ -29,7 +29,10 @@ set mouse=a
 set mousemodel=popup
 " disable mous in non-gui mode
 if !has('gui_running')
-set mouse=
+    set background=dark
+    set mouse=
+else
+    set background=light
 endif
 
 " disable menu and toolbar in gui
@@ -60,9 +63,9 @@ set list
 set comments=sr:/*,mb:*,ex:*/
 set backspace=indent,eol,start
 
+set t_Co=256
 let g:solarized_termcolors=256
 colorscheme solarized
-set t_Co=256
 
 " enable filetype settings
 filetype on
@@ -114,3 +117,8 @@ let php_htmlInStrings=1
 "
 " Highlight basic PHP functions
 let php_baselib = 1
+
+execute pathogen#infect()
+call pathogen#helptags()
+
+let g:airline#extensions#tabline#enabled = 1
