@@ -58,9 +58,9 @@ set listchars=tab:··
 set list
 
 " setup folders for temporary files
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swap//
+set undodir=~/.vim/.undo//
 
 "set statusline=%t\ %y%m%r[%{&fileencoding}]%<[%{strftime(\"%d.%m.%y\",getftime(expand(\"%:p\")))}]%k%=%-14.(%l,%c%V%)\ %P
 
