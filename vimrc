@@ -69,8 +69,8 @@ set comments=sr:/*,mb:*,ex:*/
 set backspace=indent,eol,start
 
 set t_Co=256
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+colorscheme distinguished
 
 " enable filetype settings
 filetype on
@@ -122,6 +122,9 @@ let php_htmlInStrings=1
 "
 " Highlight basic PHP functions
 let php_baselib = 1
+
+" fix vim erros when run in fish shell
+set shell=/bin/sh
 
 execute pathogen#infect()
 call pathogen#helptags()
