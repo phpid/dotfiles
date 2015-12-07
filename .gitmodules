@@ -19,3 +19,6 @@
 [submodule "vim/bundle/vimproc.vim"]
 	path = vim/bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vim/bundle/xmledit"]
+	path = vim/bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
