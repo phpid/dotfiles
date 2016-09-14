@@ -29,3 +29,13 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# Update submodules installed with Pathogen:
+# git submodule foreach git pull origin master
+
+# Delete submodule:
+# git submodule deinit bundle/vim-rvm
+# git rm bundle/vim-rvm
+# git rm --cached bundle/vim-rvm
+# rm -rf .git/modules/bundle/vim-rvm
+
