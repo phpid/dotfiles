@@ -24,21 +24,6 @@ syntax enable
 set wrap
 set linebreak
 
-" enable mouse support
-set mouse=a
-set mousemodel=popup
-" disable mous in non-gui mode
-if !has('gui_running')
-    set background=dark
-    set mouse=
-else
-    set background=light
-endif
-
-" disable menu and toolbar in gui
-"set guioptions-=T
-"set guioptions-=m
-
 " when you start searching text with /, search is performed at every new
 " character insertion
 set incsearch
@@ -135,28 +120,6 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 "
 " " AutoComplPop like behavior.
 " "let g:neocomplete#enable_auto_select = 1
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype yml,yaml setlocal ts=2 sts=2 sw=2
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-endif
-
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 map <F2> :mksession! ~/vim_session <cr> " Quick write session with F2
 map <F3> :source ~/vim_session <cr>     " And load session with F3
