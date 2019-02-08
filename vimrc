@@ -1,5 +1,4 @@
 " no compatible mode   
-execute pathogen#infect()
 set nocompatible
 
 set background=dark
