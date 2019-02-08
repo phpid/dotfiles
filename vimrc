@@ -47,8 +47,6 @@ set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swap//
 set undodir=~/.vim/.undo//
 
-"set statusline=%t\ %y%m%r[%{&fileencoding}]%<[%{strftime(\"%d.%m.%y\",getftime(expand(\"%:p\")))}]%k%=%-14.(%l,%c%V%)\ %P
-
 " docblock comments are continued when a newline is inserted
 set comments=sr:/*,mb:*,ex:*/
 set backspace=indent,eol,start
