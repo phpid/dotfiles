@@ -86,47 +86,6 @@ imap <C-V> <esc>"+gPi
 "endif
 
 
-"Use TAB to complete when typing words, else inserts TABs as usual.
-""Uses dictionary and source files to find matching words to complete.
-
-"See help completion for source,
-""Note: usual completion is on <C-n> but more trouble to press all the time.
-"Never type the same word twice and maybe learn a new spellings!
-""Use the Linux dictionary when spelling is in doubt.
-"Window users can copy the file to their machine.
-"function! Tab_Or_Complete()
-"  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-"    return "\<C-N>"
-"  else
-"    return "\<Tab>"
-"  endif
-"endfunction
-"inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
-" ------------
-" PHP settings
-" -----------
-"set dictionary=~/.vim/dic/php
-set makeprg=php\ -l\ %
-set errorformat=%m\ in\ %f\ on\ line\ %l
-" enable folding 
-"let php_folding = 1
-"
-" do not allow short tags
-let php_noShortTags = 1
-"
-" highlight SQL inside PHP strings
-let php_sql_query=1
-"
-" hightlist HTML inside PHP strings
-let php_htmlInStrings=1 
-"
-" Highlight basic PHP functions
-let php_baselib = 1
-
-" fix vim erros when run in fish shell
-set shell=/bin/sh
-
-
 let g:airline#extensions#tabline#enabled = 1
 let g:SuperTabCrMapping = 0
 
