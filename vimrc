@@ -43,9 +43,9 @@ set listchars=tab:▸\ ,eol:¬
 set list
 
 " setup folders for temporary files
-set backupdir=~/.vim/.backup//
-set directory=~/.vim/.swap//
-set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup
+set directory=~/.vim/.swap
+set undodir=~/.vim/.undo
 
 " docblock comments are continued when a newline is inserted
 set comments=sr:/*,mb:*,ex:*/
