@@ -8,6 +8,11 @@ set nu
 " show line, column number, and relative position
 set ruler
 
+" color column settings
+set textwidth=80
+set colorcolumn=+1
+"au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
 " set standard setting for PEAR coding standards
 set tabstop=4
 set shiftwidth=4
@@ -68,6 +73,5 @@ imap <C-V> <esc>"+gPi
 "    autocmd BufRead *.sql set filetype=mysql      
 "endif
 
-
-let g:airline#extensions#tabline#enabled = 1
-let g:SuperTabCrMapping = 0
+"let g:airline#extensions#tabline#enabled = 1
+"let g:SuperTabCrMapping = 0
