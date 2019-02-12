@@ -1,51 +1,57 @@
-" no compatible mode   
-set nocompatible
-
+set nocompatible " not compatible with vi
+set autoread " detect when a file is changed
 set background=dark
 
-" show row numbers
-set nu
-" show line, column number, and relative position
-set ruler
+set ruler " show line, column number, and relative position
+set number " show row numbers (overrides 'relativenumber' if last)
+set relativenumber " show relative line number (overrides 'number' if last)
+
+" set up colorscheme before other color changes
+set t_Co=256 " explicitly tell Vim that the terminal supports 256 colorsspace
+colorscheme distinguished
+syntax on " turn on syntax highlighting (more readable files)
 
 " color column settings
 set textwidth=80
 set colorcolumn=+1
 "au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+set wrap " turn on line break wrapping
+set linebreak " set soft wrapping
 
-" set standard setting for PEAR coding standards
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-set smartindent
-set autoindent
-set showmatch
-set ai " enable autoindents for new rows
-set cin " c style indents
-syntax enable
+" Tab control 
+set tabstop=4 " the visible width of tabs
+set shiftwidth=4 " number of spaces to use for indent and unindent
+set shiftround " indent to nearest 'tabstop' 
+set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set expandtab " insert spaces rather than tabs for <Tab>
+set autoindent " carries over previous indent to the next line
+set smartindent " smart 'autoindent' to match C-style blocks '{', '}', '#'
+set cin " enable c-style indents
 
-" Enable line break wrapping
-set wrap
-set linebreak
-
-" when you start searching text with /, search is performed at every new
-" character insertion
-set incsearch
-set hlsearch
-set ignorecase
-
-set scrolljump=7
-set scrolloff=7
-set hidden
+" User Interface
+set clipboard=unnamed " Use global system clipboard
+set scrolljump=7 " number of lines to scroll off the screen
+set scrolloff=7 " number of lines to keep above and below the cursor
+set hidden " current buffer can be put into background between windows
 set fileformats=unix,dos
 set termencoding=utf-8
-" speed up macros
-set lazyredraw
+set ttyfast " faster redrawing
+set lazyredraw " speed up macros. do not redraw screen while executing macros
 
 " show tabs as dots
 set listchars=tab:▸\ ,eol:¬
 set list
+
+" Searching
+" when you start searching text with /, search is performed at every new
+" character insertion
+set incsearch " incremental search (useful when searching large text files)
+set hlsearch " turns on highlighting for matched search patterns
+set ignorecase " case insensitive search
+set smartcase " case-sensitive if expression contains a capital letter
+
+set showmatch " jump to the matching bracket seen on the screen
+hi MatchParen cterm=reverse ctermbg=yellow ctermfg=blue " change matching color
 
 " setup folders for temporary files
 set backupdir=~/.vim/.backup
@@ -55,10 +61,6 @@ set undodir=~/.vim/.undo
 " docblock comments are continued when a newline is inserted
 set comments=sr:/*,mb:*,ex:*/
 set backspace=indent,eol,start
-
-set t_Co=256
-" let g:solarized_termcolors=256
-colorscheme distinguished
 
 " enable filetype settings
 filetype on
