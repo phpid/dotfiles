@@ -106,4 +106,9 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=1
+" npm install -g eslint
+" npm install -g babel-eslint
+" npm install -g eslint-plugin-react
+" configure linter in ~/.eslintrc
+let g:syntastic_javascript_checkers=['eslint']
 
