@@ -34,7 +34,7 @@ set clipboard=unnamed " Use global system clipboard
 set scrolljump=7 " number of lines to scroll off the screen
 set scrolloff=7 " number of lines to keep above and below the cursor
 set hidden " current buffer can be put into background between windows
-set fileformats=unix,dos
+set fileformats=unix
 set termencoding=utf-8
 set ttyfast " faster redrawing
 set lazyredraw " speed up macros. do not redraw screen while executing macros
