@@ -12,7 +12,7 @@ colorscheme distinguished
 syntax on " turn on syntax highlighting (more readable files)
 
 " color column settings
-set textwidth=79
+set textwidth=80
 set colorcolumn=+1
 "au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 set wrap " turn on line break wrapping
@@ -81,11 +81,13 @@ imap <C-V> <esc>"+gPi
 filetype on
 filetype plugin on
 filetype indent on
+"set omnifunc=syntaxcomplete#Complete
 
 autocmd FileType css setlocal ts=2 sts=2 sw=2 
 autocmd FileType html,markdown setlocal ts=2 sts=2 sw=2 
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
 "if has("autocmd")
 "    autocmd BufRead *.sql set filetype=mysql      
 "endif
