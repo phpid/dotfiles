@@ -20,6 +20,7 @@ set linebreak " set soft wrapping
 
 " Tab control 
 set tabstop=4 " the visible width of tabs
+set softtabstop=4 " number of spaces to use for tab
 set shiftwidth=4 " number of spaces to use for indent and unindent
 set shiftround " indent to nearest 'tabstop' 
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
