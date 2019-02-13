@@ -94,3 +94,16 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 "let g:airline#extensions#tabline#enabled = 1
 "let g:SuperTabCrMapping = 0
+
+" Plugins configuration
+"
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+
