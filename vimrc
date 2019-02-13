@@ -63,11 +63,6 @@ set undodir=~/.vim/.undo
 set comments=sr:/*,mb:*,ex:*/
 set backspace=indent,eol,start
 
-" enable filetype settings
-filetype on
-filetype plugin on
-filetype indent on
-
 " Unmap the arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -82,6 +77,15 @@ ino <up> <Nop>
 vmap <C-C> "+yi
 imap <C-V> <esc>"+gPi
 
+" enable filetype settings
+filetype on
+filetype plugin on
+filetype indent on
+
+autocmd FileType css setlocal ts=2 sts=2 sw=2 
+autocmd FileType html,markdown setlocal ts=2 sts=2 sw=2 
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 
 "if has("autocmd")
 "    autocmd BufRead *.sql set filetype=mysql      
 "endif
