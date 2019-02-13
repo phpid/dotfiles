@@ -3,8 +3,8 @@ set autoread " detect when a file is changed
 set background=dark
 
 set ruler " show line, column number, and relative position
+"set relativenumber " show relative line number (overrides 'number' if last)
 set number " show row numbers (overrides 'relativenumber' if last)
-set relativenumber " show relative line number (overrides 'number' if last)
 
 " set up colorscheme before other color changes
 set t_Co=256 " explicitly tell Vim that the terminal supports 256 colorsspace
@@ -12,7 +12,7 @@ colorscheme distinguished
 syntax on " turn on syntax highlighting (more readable files)
 
 " color column settings
-set textwidth=80
+set textwidth=79
 set colorcolumn=+1
 "au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 set wrap " turn on line break wrapping
@@ -66,6 +66,16 @@ set backspace=indent,eol,start
 filetype on
 filetype plugin on
 filetype indent on
+
+" Unmap the arrow keys
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
 
 " C-c and C-v - Copy/Paste to the global clipboard
 vmap <C-C> "+yi
