@@ -42,6 +42,8 @@ export HADOOP_INSTALL=$HADOOP_HOME
 export PATH=${PATH}:/usr/local/mysql/bin
 export PATH=${PATH}:/usr/local/mysql/support-files
 export PATH="/usr/local/sbin:$PATH"
+# Node environment
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 # Ruby environment
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
