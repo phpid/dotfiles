@@ -29,7 +29,7 @@ export PATH="$PATH:$COMPOSER_HOME/vendor/bin"
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export PATH="$PATH:$JAVA_HOME/bin"
 # Hadoop Installing Hadoop in Pseudo Distributed Mode
-export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.1/libexec
+export HADOOP_HOME=/usr/local/Cellar/hadoop/3.1.2/libexec
 export HADOOP_CLASSPATH=$(find $HADOOP_HOME -name '*.jar' | xargs echo | tr ' ' ':')
 export HADOOP_MAPRED_HOME=$HADOOP_HOME 
 export HADOOP_COMMON_HOME=$HADOOP_HOME 
