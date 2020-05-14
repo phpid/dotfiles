@@ -56,3 +56,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Java environment
+
+# Git settings
+# same as running git pull in each submodule
+alias git-submodule-update='git submodule update --remote --merge'
+
