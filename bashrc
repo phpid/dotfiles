@@ -28,6 +28,7 @@ export COMPOSER_HOME="$HOME/.composer"
 export PATH="$PATH:$COMPOSER_HOME/vendor/bin"
 # Java environment
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export CLASSPATH=${CLASSPATH}:bin:.
 export PATH="$PATH:$JAVA_HOME/bin"
 export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
 # Hadoop Installing Hadoop in Pseudo Distributed Mode
@@ -59,5 +60,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Git settings
 # same as running git pull in each submodule
-alias git-submodule-update='git submodule update --remote --merge'
+# alias git-submodule-update='git submodule update --remote --merge'
+alias git-submodule-update='git pull --recurse-submodules'
 
