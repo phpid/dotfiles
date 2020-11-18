@@ -87,3 +87,7 @@ fabric.properties
 .vscode/
 *.code-workspace
 
+# Python
+__pycache__/
+*.pyc
+
