@@ -21,7 +21,7 @@ alias git-submodule-update='git pull --recurse-submodules'
 #export PATH="$PATH:$COMPOSER_HOME/vendor/bin"
 
 # Java environment
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
 export CLASSPATH=${CLASSPATH}:bin:.
 export PATH="$PATH:$JAVA_HOME/bin"
 export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
